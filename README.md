@@ -86,6 +86,19 @@ We arrived at this model by eliminating the features with non-significant p-valu
 #### Interpretation of Model
 We found that changes in zip code were associated with significant changes in price. The most expensive zipcode was 98039, associated with a price that is about 300% higher than our standard (and close to 300% higher than the lowest). 
 
+### Ridge & Lasso Regression Using SKLearn
+
+We ran Ridge and Lasso Regression models in hopes of controlling for variance in our data. When comparing the test errors against our linear models we found that Ridge Regression produced the best output. However, we noticed that the linear coefficients in SKLearn varied greatly from the ones we produced in Statsmodel. If given more time we would definitely hope to compare and discover the cause of these differences.
+
+    **Train Error Ridge Model 623.3321375142388**
+    **Test Error Ridge Model 155.71200692361117**
+
+    **Train Error Lasso Model 797.8057032615068**  
+    **Test Error Lasso Model 195.55344911614895**
+
+    **Train Error Unpenalized Linear Model -2682273.3556272555** 
+    **Test Error Unpenalized Linear Model -670066.0383374249**
+
 #### Evaluating Model Assumptions
 ##### Linearity:
 We were not to concerned with linearity; there seems to be a general linear trend.
